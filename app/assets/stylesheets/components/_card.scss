@@ -1,0 +1,22 @@
+.card {
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  margin: 20px;
+  height: 180px;
+  padding: 10px;
+  .card_description {
+    margin-top: 10px;
+    h4 {
+      font-size: 20px;
+    }
+    h5 {
+      font-size: 13px;
+      color: #888888;
+    }
+    p {
+      margin-top: 20px;
+      font-size: 14px;
+    }
+  }
+}

@@ -1,0 +1,12 @@
+.form_group {
+  font-family: "Raleway", "Helvetica", "sans-serif";
+  padding: 20px;
+  display: flex;
+  width: 650px;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #f5f5f5;
+  .form_input {
+    padding-left: 10px;
+  }
+}

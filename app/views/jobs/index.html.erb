@@ -1,2 +1,33 @@
-<h1>Jobs#index</h1>
-<p>Find me in app/views/jobs/index.html.erb</p>
+<div class="overall_container_sidebar">
+  <div class="main_container">
+    <div class="sidebar">
+      <%= render 'shared/sidebar' %>
+    </div>
+
+    <div class="body_container">
+      <div class="top_banner">
+        <%= render 'shared/searchform' %>
+      </div>
+      <div class="cards_container background_grey">
+        <h3 class="remove_topmargin"><%= Job.count %> job listings</h3>
+        <% @jobs.each do |job| %>
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="card">
+                <div class="card_image">
+                  <%= image_tag job.photo, width: 250, height: 150 %>
+                </div>
+                <div class="card_description">
+                  <h4><%= job.name %></h4>
+                  <h5><%= job.user.email %></h5>
+                  <p><%= job.description %></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        <% end %>
+     </div>
+    </div>
+  </div>
+</div>
+
