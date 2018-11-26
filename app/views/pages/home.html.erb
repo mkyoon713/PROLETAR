@@ -1,30 +1,20 @@
-<div class="navbar-wagon">
-  <!-- Logo -->
-  <div>
-    <a href="/" class="navbar-wagon-brand">
-      <%= image_tag("proletar.png")  %>
-  </a>
-    <a href="" class="navbar-wagon-item navbar-wagon-link"><strong>Find Help</strong></a>
-    <a href="" class="navbar-wagon-item navbar-wagon-link"><strong>Lend Help</strong></a>
-  </div>
-  <!-- Right Navigation -->
-  <div class="navbar-wagon-right hidden-xs hidden-sm">
-    <a href="" class="navbar-wagon-item navbar-wagon-link">Sign in</a>
-    <!-- Profile photo with dropdown list -->
-    <div class="navbar-wagon-item">
-    </div>
-  </div>
-  <!-- Dropdown appearing on mobile only -->
-  <div class="navbar-wagon-item hidden-md hidden-lg">
-    <div class="dropdown">
-      <i class="fas fa-bars dropdown-toggle" data-toggle="dropdown" role="button"></i>
-      <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-        <li><a href="#">Host</a></li>
-        <li><a href="#">Trips</a></li>
-        <li><a href="#">Messagese</a></li>
-      </ul>
-    </div>
-  </div>
+<div class="overall_container">
+  <h3 class="large_topmargin">You are here to find help</h3>
+  <h1 class="reduce_lineheight">We're here</h1>
+  <h1 class="reduce_lineheight">to help</h1>
+
+<div class="large_topmargin">
+  <%= render 'shared/searchform' %>
 </div>
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+
+<div class="large_topmargin">
+  <p>Browse categories</p>
+</div>
+
+<div class="placeholder text-center">
+  <p>Add category cards here</p>
+</div>
+
+
+
+
