@@ -10,16 +10,16 @@
 puts "creating users"
 User.destroy_all
 users = User.create ([
-{username: 'kpiretti56', password: '123456'},
-{username: 'mjohnson43', password: '123456'},
-{username: 'maxman89', password: '123456'},
-{username: 'jmohammed19', password: '123456'},
-{username: 'francishthometz', password: '123456'},
-{username: 'jconduah729', password: '123456'},
-{username: 'mkyoon713', password: '123456'},
-{username: 'pperon914', password: '123456'},
-{username: 'mmorataya70', password: '123456'},
-{username: 'hjennett67', password: '123456'}
+{email: 'kpiretti56@gmail.com', encrypted_password: '123456'},
+{email: 'mjohnson43@gmail.com', encrypted_password: '123456'},
+{email: 'maxman89@gmail.com', encrypted_password: '123456'},
+{email: 'jmohammed19@gmail.com', encrypted_password: '123456'},
+{email: 'francishthometz@gmail.com', encrypted_password: '123456'},
+{email: 'jconduah729@gmail.com', encrypted_password: '123456'},
+{email: 'mkyoon713@gmail.com', encrypted_password: '123456'},
+{email: 'pperon914@gmail.com', encrypted_password: '123456'},
+{email: 'mmorataya70@gmail.com', encrypted_password: '123456'},
+{email: 'hjennett67@gmail.com', encrypted_password: '123456'}
 
 ])
 puts "created #{User.count} users"
@@ -61,11 +61,11 @@ Category.destroy_all
 categories = Category.create([{
 name: 'Educational', photo: 'https://static1.squarespace.com/static/55f6cb4ee4b02b9a7bded660/t/55fc2e89e4b08422c884ccbc/1442590347312/JOB.jpg?format=1000w'},
 {name: 'Household', photo: 'https://static1.squarespace.com/static/55f6cb4ee4b02b9a7bded660/t/55fc2e89e4b08422c884ccbc/1442590347312/JOB.jpg?format=1000w'},
-{name: 'Animal Care', photo: 'https://static1.squarespace.com/static/55f6cb4ee4b02b9a7bded660/t/55fc2e89e4b08422c884ccbc/1442590347312/JOB.jpg?format=1000w'}
+{name: 'Animal Care', photo: 'https://static1.squarespace.com/static/55f6cb4ee4b02b9a7bded660/t/55fc2e89e4b08422c884ccbc/1442590347312/JOB.jpg?format=1000w'},
 {name: 'Video Games', photo: 'https://static1.squarespace.com/static/55f6cb4ee4b02b9a7bded660/t/55fc2e89e4b08422c884ccbc/1442590347312/JOB.jpg?format=1000w'},
 {name: 'Landscaping', photo: 'https://static1.squarespace.com/static/55f6cb4ee4b02b9a7bded660/t/55fc2e89e4b08422c884ccbc/1442590347312/JOB.jpg?format=1000w'},
 {name: 'Food', photo: 'https://static1.squarespace.com/static/55f6cb4ee4b02b9a7bded660/t/55fc2e89e4b08422c884ccbc/1442590347312/JOB.jpg?format=1000w'},
-{name: 'Automotive', photo: 'https://static1.squarespace.com/static/55f6cb4ee4b02b9a7bded660/t/55fc2e89e4b08422c884ccbc/1442590347312/JOB.jpg?format=1000w'}
+{name: 'Automotive', photo: 'https://static1.squarespace.com/static/55f6cb4ee4b02b9a7bded660/t/55fc2e89e4b08422c884ccbc/1442590347312/JOB.jpg?format=1000w'},
 {name: 'General Labor', photo: 'https://static1.squarespace.com/static/55f6cb4ee4b02b9a7bded660/t/55fc2e89e4b08422c884ccbc/1442590347312/JOB.jpg?format=1000w'},
 {name: 'Personal', photo: 'https://static1.squarespace.com/static/55f6cb4ee4b02b9a7bded660/t/55fc2e89e4b08422c884ccbc/1442590347312/JOB.jpg?format=1000w'}])
 
