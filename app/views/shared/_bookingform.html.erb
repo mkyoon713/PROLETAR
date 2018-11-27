@@ -1,0 +1,17 @@
+<div class="booking_form_group">
+  <div class="booking_form_input">
+    <%= form_tag(jobs_path method: :get) do %>
+    1. Choose date
+    <%= text_field_tag :date %>
+    <% end %>
+  </div>
+  <div class="booking_form_input">
+    <%= form_tag(jobs_path method: :get) do %>
+    2. Questions or concerns
+    <%= text_area_tag :location %>
+  </div>
+  <div class="booking_form_input">
+    <%= submit_tag 'Book', class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
