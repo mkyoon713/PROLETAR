@@ -1,43 +1,46 @@
 <div class="overall_container">
-<div class="form_group">
-  <div class="form_input">
-    <%= form_tag(jobs_path method: :get) do %>
-      WHAT <%= text_field_tag :name %>
-    <% end %>
+  <div class="form_group">
+    <div class="form_input">
+      <%= form_tag(jobs_path method: :get) do %>
+      WHAT
+      <%= text_field_tag :name %>
+      <% end %>
+    </div>
+    <div class="form_input">
+      <%= form_tag(jobs_path method: :get) do %>
+      WHERE
+      <%= text_field_tag :location %>
+    </div>
+    <div class="form_input">
+      <%= submit_tag 'Search', class: "btn btn-primary" %>
+      <% end %>
+    </div>
   </div>
-  <div class="form_input">
-    <%= form_tag(jobs_path method: :get) do %>
-      WHERE <%= text_field_tag :location %>
-  </div>
-  <div class="form_input">
-    <%= submit_tag 'Search', class: "btn btn-primary" %>
-    <% end %>
-  </div>
-</div>
-<div class="job_content">
-  <div class="row">
-    <div class="col-xs-6">
-        <div class="job-desc"> <h3><%= "#{@job.name}"%></h3></div>
-  <div class="card" style="background-color: white">
-
-  <br>
-  <div class="card-description">
-   <p><%= "#{@job.description}" %></p>
-  </div>
-
-</div>
-</div>
-<div class="col-xs-6">
-  <div><img src="/assets/job-325923df366efc24eeb84f5103f9b23fc9a4dc37e9a987fcdbe4eb091f35652f.png" height="300" class="image"></div>
+  <div class="job_content">
+    <div class="row">
+      <div class="col-xs-6">
+        <div class="job-desc"> <h3><%= "#{@job.name}"%></h3>
+        </div>
+        <div class="card" style="background-color: white">
+          <br>
+          <div class="card-description">
+            <p>
+              <%= "#{@job.description}" %>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-6">
+        <div><img src="/assets/job-325923df366efc24eeb84f5103f9b23fc9a4dc37e9a987fcdbe4eb091f35652f.png" height="300" class="image"></div>
+        </div>
+      </div>
+    </div>
+    <div class="btn_container">
+      <div class="book_button">
+        <%= link_to "Book Now", new_job_booking_path(@job), class: "btn btn-primary" %>
+      </div>
+      <div class="msg_button">
+        <a href="#" class="btn btn-medium">Send a Message</a>
       </div>
     </div>
   </div>
-  <div class ="btn_container">
-  <div class="book_button">
-    <a href="#" class="btn btn-primary">Book now</a>
-  </div>
-   <div class="msg_button">
-    <a href="#" class="btn btn-medium">Send a Message</a>
-  </div>
-</div>
-</div>

@@ -4,18 +4,17 @@
     <a href="/" class="navbar-wagon-brand">
       <%= image_tag("proletar.png")  %>
   </a>
-    <a href="" class="navbar-wagon-item navbar-wagon-link"><strong>Find Help</strong></a>
+    <strong><%= link_to "Find Help", jobs_path, class: "navbar-wagon-item navbar-wagon-link" %></strong>
     <a href="" class="navbar-wagon-item navbar-wagon-link"><strong>Lend Help</strong></a>
   </div>
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
     <a href="" class="navbar-wagon-item navbar-wagon-link">  </a>
-      <% if user_signed_in? %>
-      <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
-      <% else %>
-      <%= link_to "Sign in", new_user_session_path %>
-      <% end %>
-
+    <% if user_signed_in? %>
+    <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+    <% else %>
+    <%= link_to "Sign in", new_user_session_path %>
+    <% end %>
     <!-- Profile photo with dropdown list -->
     <div class="navbar-wagon-item">
     </div>
@@ -31,5 +30,4 @@
       </ul>
     </div>
   </div>
-
 </div>
