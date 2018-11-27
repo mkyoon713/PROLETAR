@@ -8,7 +8,7 @@
   <div class="booking_form_input">
     <%= form_tag(jobs_path method: :get) do %>
     2. Questions or concerns
-    <%= text_area_tag :location %>
+    <%= text_area_tag :message, :cols => 30, :rows => 10 %>
   </div>
   <div class="booking_form_input">
     <%= submit_tag 'Book', class: "btn btn-primary" %>
