@@ -18,7 +18,7 @@
                   <%= image_tag job.photo, width: 250, height: 150 %>
                 </div>
                 <div class="card_description">
-                  <h4><%= job.name %></h4>
+                  <h4><%= link_to job.name, job_path(job) %></h4>
                   <h5><%= job.user.email %></h5>
                   <p><%= job.description %></p>
                 </div>

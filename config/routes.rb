@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
   devise_for :users
+
   root to: 'pages#home'
+
   get "booking", to: "pages#dashboard"
+
   resources :jobs do
     resources :bookings, only: [:new, :create]
   end
