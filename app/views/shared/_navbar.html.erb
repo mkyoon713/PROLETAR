@@ -9,7 +9,13 @@
   </div>
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
-    <a href="" class="navbar-wagon-item navbar-wagon-link">Sign in</a>
+    <a href="" class="navbar-wagon-item navbar-wagon-link">  </a>
+      <% if user_signed_in? %>
+      <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+      <% else %>
+      <%= link_to "Sign in", new_user_session_path %>
+      <% end %>
+
     <!-- Profile photo with dropdown list -->
     <div class="navbar-wagon-item">
     </div>
@@ -21,8 +27,9 @@
       <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
         <li><a href="#">Host</a></li>
         <li><a href="#">Trips</a></li>
-        <li><a href="#">Messagese</a></li>
+        <li><a href="#">Messages</a></li>
       </ul>
     </div>
   </div>
+
 </div>
