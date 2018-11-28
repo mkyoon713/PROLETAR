@@ -8,6 +8,7 @@
   .card_description {
     margin-left: 10px;
     margin-right: 10px;
+    width: 400px;
   }
   h4 {
     font-size: 20px;
@@ -21,14 +22,14 @@
     font-size: 14px;
   }
   .card_rating {
-    width: 100px;
+    width: 200px;
     padding: 10px;
     border-left: 2px solid #F5F5F5;
   }
 }
 
 .category_cards_wrapper {
-  border-top: 1px dotted black;
+  border-top: 1px dotted #757577;
   padding-top: 50px;
 }
 
