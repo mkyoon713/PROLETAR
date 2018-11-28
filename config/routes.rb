@@ -6,8 +6,9 @@ Rails.application.routes.draw do
   get "booking", to: "pages#dashboard"
 
   resources :jobs do
-    resources :bookings, only: [:new, :create]
+    resources :bookings, only: [:new, :create, :show]
   end
   resources :bookings, only: [:edit, :update, :destroy]
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
+
