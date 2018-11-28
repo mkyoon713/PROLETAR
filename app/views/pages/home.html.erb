@@ -6,7 +6,7 @@
   <div class="large_topmargin">
     <%= render 'shared/searchform' %>
   </div>
-  <div class="large_topmargin">
+  <div class="extra_large_topmargin category_cards_wrapper">
     <h5>Browse categories</h5>
   </div>
   <div class="category_cards_container background_grey">
@@ -15,7 +15,7 @@
         <div class="col-md-4">
           <div class="category_card">
             <p><%= category.name %></p>
-            <%= image_tag category.photo, width: 250, height: 150 %>
+            <%= image_tag category.photo, width: 300, height: 150 %>
           </div>
         </div>
       <% end %>
