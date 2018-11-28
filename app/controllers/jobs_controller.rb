@@ -7,6 +7,7 @@ class JobsController < ApplicationController
   def show
     # @job.rating = Booking.find(params)
     @job = Job.find(params[:id])
+
   end
 
   def new
