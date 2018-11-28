@@ -9,7 +9,7 @@ class JobsController < ApplicationController
 
   def ratings
     @ratings = 0
-    jobs = Job.all
+    job = Job.all
     job.bookings.each do |booking|
       @ratings += booking.rating
     end
@@ -19,7 +19,7 @@ class JobsController < ApplicationController
   def show
     # @job.rating = Booking.find(params)
     @job = Job.find(params[:id])
-
+    @booking = Booking.new
   end
 
   def new

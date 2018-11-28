@@ -14,17 +14,14 @@
         </div>
       </div>
       <div class="col-xs-6">
-        <div><%= image_tag "#{@job.photo}", height: 300, crop: :fill %></div>
+        <div>
+          <%= image_tag "#{@job.photo}", height: 300, crop: :fill %>
+        </div>
         </div>
       </div>
     </div>
-    <div class="btn_container">
-      <div class="book_button">
-        <%= link_to "Book Now", new_job_booking_path(@job), class: "btn btn-primary" %>
-      </div>
-      <div class="msg_button">
-        <a href="#" class="btn btn-medium">Send a Message</a>
-      </div>
+    <div class="col-xs-6">
+      <%= render 'bookings/bookingform', job: @job, booking: @booking %>
     </div>
   </div>
 
