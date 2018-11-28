@@ -1,3 +1,9 @@
-<p>Recommended jobs</p>
-<p><strong>Rate</strong></p>
-<p><strong>Location</strong></p>
+<p>Recommended jobs:</p>
+<br>
+<p><strong>Categories</strong></p>
+<% Category.all.each do |category| %>
+<ul>
+  <li><%= category.name %> (<%= category.jobs.count %>)</li>
+</ul>
+<% end %>
+
