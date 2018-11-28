@@ -1,7 +1,10 @@
 class JobsController < ApplicationController
   def index
-
-    @jobs = Job.all
+    if params[:location]
+      @jobs = Job.where('location ILIKE ?', "%#{params[:location]}%")
+    else
+      @jobs = Job.all
+    end
   end
 
   def ratings
@@ -33,5 +36,11 @@ class JobsController < ApplicationController
   end
 
   def destroy
+  end
+
+  private
+
+  def job_params
+    params.require(:job).permit(:name, :description, :location, :price, :photo, :user_id, :category_id)
   end
 end
