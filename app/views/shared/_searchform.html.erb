@@ -1,15 +1,11 @@
-<div class="form_group">
+<div class="form">
   <div class="form_input">
-    <%= form_tag(jobs_path method: :get) do %>
-      WHAT <%= text_field_tag :name %>
-    <% end %>
+    <%= form_tag(jobs_path, method: :get) do %>
+      Location <%= text_field_tag :location, params[:location] %>
   </div>
   <div class="form_input">
-    <%= form_tag(jobs_path method: :get) do %>
-      WHERE <%= text_field_tag :location %>
-  </div>
-  <div class="form_input">
-    <%= submit_tag 'Search', class: "btn btn-primary" %>
+    <%= submit_tag 'Search', name: nil, class: "btn btn-primary" %>
     <% end %>
   </div>
 </div>
+
