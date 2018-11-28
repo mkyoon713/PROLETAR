@@ -3,6 +3,15 @@ class JobsController < ApplicationController
     @jobs = Job.all
   end
 
+  def ratings
+    @ratings = 0
+    jobs = Job.all
+    job.bookings.each do |booking|
+      @ratings += booking.rating
+    end
+    return @ratings
+  end
+
   def show
   end
 

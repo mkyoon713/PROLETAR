@@ -22,6 +22,15 @@
                   <h5><%= job.user.email %></h5>
                   <p><%= job.description %></p>
                 </div>
+                <div class="card_rating">
+                  <p><%= job.bookings.count %> booking completed</p>
+                  <% ratings = 0 %>
+                  <% job.bookings.each do |booking| %>
+                  <% ratings += booking.rating %>
+                  <% avg_rating = (ratings / job.bookings.count) %>
+                  <p>rating: <%= avg_rating %></p>
+                  <% end %>
+                </div>
               </div>
             </div>
           </div>
