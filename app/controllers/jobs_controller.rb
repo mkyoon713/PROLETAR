@@ -8,15 +8,6 @@ class JobsController < ApplicationController
     end
   end
 
-  def ratings
-    @ratings = 0
-    job = Job.all
-    job.bookings.each do |booking|
-      @ratings += booking.rating
-    end
-    return @ratings
-  end
-
   def show
     # @job.rating = Booking.find(params)
     @job = Job.find(params[:id])
@@ -38,9 +29,6 @@ class JobsController < ApplicationController
     else
       render :new
     end
-
-    # before you save
-
   end
 
   # goes into controllers corresponding policy

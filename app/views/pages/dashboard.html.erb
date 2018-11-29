@@ -1,0 +1,17 @@
+<%= render 'shared/tab' %>
+<div class="overall_container">
+  <div class="dashboard_container">
+    <% @own_jobs.each do |job| %>
+      <div class="message">
+        <%= cl_image_tag job.photo, width: 150, height: 100 %>
+        <div class="message-body">
+          <p><strong><%= job.name %></strong></p>
+          <p>Number of bookings: <%= job.bookings.count %></p>
+        </div>
+        <div class="message-status">
+          <p class="price">$<%= job.price %> /hr</p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

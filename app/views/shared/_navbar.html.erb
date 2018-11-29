@@ -9,8 +9,8 @@
   </div>
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
-    <a href="" class="navbar-wagon-item navbar-wagon-link">  </a>
     <% if user_signed_in? %>
+    <%= link_to "My Dashboard", dashboard_path, class: "log-in-out" %>
     <%= link_to "Sign out", destroy_user_session_path, :method => :delete, class: "log-in-out" %>
     <% else %>
     <%= link_to "Sign in", new_user_session_path, class: "log-in-out" %>
