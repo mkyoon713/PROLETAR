@@ -27,7 +27,12 @@ class JobsController < ApplicationController
   end
 
   def create
-    @job = Job.new(params[:id])
+    @job = Job.new(job_params)
+    if @job.save
+      redirect_to job_path(@job)
+    else
+      render :new
+    end
   end
 
   def edit
