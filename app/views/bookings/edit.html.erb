@@ -18,15 +18,19 @@
         <div>
           <%= cl_image_tag "#{@booking.job.photo}", height: 300, crop: :fill %>
         </div>
+        <br>
       </div>
-      <div class="col-xs-6 margin_bottom">
-        <% if policy(@booking).edit? %>
-          <%= render 'bookings/bookingform', job: @booking.job, booking: @booking  %>
-        <% end %>
+      <div class="col-xs-6 margin_left">
+        <div class="booking_form_group">
+          <% if policy(@booking).edit? %>
+            <%= render 'bookings/bookingform', job: @booking.job, booking: @booking  %>
+          <% end %>
+        </div>
+        <br>
+        <div class="backlink">
+          <%= link_to "View other job listings", jobs_path, class: "blue_font" %>
+        </div>
       </div>
     </div>
-  </div>
-  <div class= "backlink">
-    <%= link_to "View other job listings", jobs_path, class: "blue_font" %>
   </div>
 </div>
