@@ -2,7 +2,6 @@
   <h3 class="large_topmargin">You are here to find help</h3>
   <h1 class="reduce_lineheight">We're here</h1>
   <h1 class="reduce_lineheight">to help</h1>
-
   <div class="large_topmargin">
     <%= render 'shared/searchform' %>
   </div>
@@ -12,14 +11,15 @@
   <div class="category_cards_container background_grey">
     <div class="row">
       <% Category.all.each do |category| %>
-        <div class="col-md-4">
-          <div class="category_card">
-            <p><%= category.name %></p>
-            <%= image_tag category.photo, width: 300, height: 150 %>
-          </div>
+      <div class="col-md-4">
+        <div class="category_card">
+          <p>
+            <%= category.name %>
+          </p>
+          <%=link_to image_tag category.photo, class: "card-link", width: 300, height: 150 %>
         </div>
+      </div>
       <% end %>
     </div>
   </div>
-
 </div>
