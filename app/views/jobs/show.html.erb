@@ -31,11 +31,12 @@
                          data: { confirm: 'Are you sure?' } %>
           <% end %>
         </div>
+        <br>
+        <div class="backlink">
+          <%= link_to "View other job listings", jobs_path, class: "blue_font" %>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="backlink">
-    <%= link_to "View other job listings", jobs_path, class: "blue_font" %>
   </div>
 </div>
 <!--  if policy(Job).create?
