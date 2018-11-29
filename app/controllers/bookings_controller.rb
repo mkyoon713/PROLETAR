@@ -2,10 +2,12 @@ class BookingsController < ApplicationController
   def new
     @job = Job.find(params[:job_id])
     @booking = Booking.new
+    authorize @booking
   end
 
   def create
     @booking = Booking.new(booking_params)
+    authorize @booking
     @job = Job.find(params[:job_id])
     @booking.job = @job
     @booking.user = current_user
@@ -18,6 +20,7 @@ class BookingsController < ApplicationController
 
   def show
     @booking = Booking.find(params[:id])
+    authorize @booking
   end
 
   def edit
