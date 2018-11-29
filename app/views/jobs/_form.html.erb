@@ -1,48 +1,41 @@
 <div class="overall_container overall-form">
-
   <div class="form">
     <%= simple_form_for(@job) do |f| %>
-      <% if @job.errors.any? %>
-        <div class="errors-container">
-          <ul>
-            <% @job.errors.full_messages.each do |message| %>
-              <li><%= message %></li>
-            <% end %>
-          </ul>
-        </div>
-      <% end %>
-
-      <div class="group">
-        <%= f.label :job_name %>
-        <%= f.text_field :name %>
-      </div>
-
-      <div class="group">
-        <%= f.label :description %>
-        <%= f.text_field :description %>
-      </div>
-
-      <div class="group">
-        <%= f.label :location %>
-        <%= f.text_field :location %>
-      </div>
-
-      <div class="group">
-        <%= f.label :price %>
-        <%= f.text_field :price %>
-      </div>
-
-      <div class="group">
-        <%= f.association :category %>
-      </div>
-
-      <div class="group">
-        <%= f.input :photo %>
-        <%= f.input :photo_cache, as: :hidden %>
-      </div>
-
-      <%= f.submit "Create Help", class: "btn btn-primary" %>
+    <% if @job.errors.any? %>
+    <div class="errors-container">
+      <ul>
+        <% @job.errors.full_messages.each do |message| %>
+        <li>
+          <%= message %>
+        </li>
+        <% end %>
+      </ul>
+    </div>
+    <% end %>
+    <div class="group">
+      <%= f.label :job_name %>
+      <%= f.text_field :name %>
+    </div>
+    <div class="group">
+      <%= f.label :description %>
+      <%= f.text_field :description %>
+    </div>
+    <div class="group">
+      <%= f.label :location %>
+      <%= f.text_field :location %>
+    </div>
+    <div class="group">
+      <%= f.label :price %>
+      <%= f.text_field :price %>
+    </div>
+    <div class="group">
+      <%= f.association :category %>
+    </div>
+    <div class="group">
+      <%= f.input :photo %>
+      <%= f.input :photo_cache, as: :hidden %>
+    </div>
+    <%= f.submit "Create Job", class: "btn btn-primary" %>
     <% end %>
   </div>
-
 </div>
