@@ -15,7 +15,7 @@
             <div class="col-xs-12">
               <div class="card">
                 <div class="card_image">
-                  <%= cl_image_tag job.photo, width: 250, height: 180 %>
+                  <%= cl_image_tag job.photo, width: 250, height: 200 %>
                 </div>
                 <div class="card_description">
                   <h4><%= link_to job.name, job_path(job) %></h4>
@@ -26,13 +26,7 @@
                 <div class="card_rating">
                   <p><strong>$<%= job.price %>/hour</strong></p>
                   <p><%= job.bookings.count %> booking </p>
-                  <% ratings = 0 %>
-                  <% job.bookings.each do |booking| %>
-                  <% ratings += booking.rating if !booking.rating.nil? %>
-                  <% @avg_rating = (ratings / job.bookings.count) %>
-                  <% @avg_rating %>
-                  <% end %>
-                  <p>Rating: <%= @avg_rating %></p>
+                  <p>Rating: <%= job.average_rating %></p>
                 </div>
               </div>
             </div>

@@ -1,2 +1,32 @@
-<h1>Bookings#edit</h1>
-<p>Find me in app/views/bookings/edit.html.erb</p>
+<div class="overall_container">
+  <div class="job_content">
+    <div class="row">
+      <div class="col-xs-6">
+        <div class="job-desc">
+          <h3><%= "#{@booking.job.name}"%></h3>
+        </div>
+        <div class="card" style="background-color: white">
+          <br>
+          <div class="card-description">
+            <p>
+              <%= "#{@booking.job.description}" %>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-6">
+        <div>
+          <%= cl_image_tag "#{@booking.job.photo}", height: 300, crop: :fill %>
+        </div>
+      </div>
+      <div class="col-xs-6 margin_bottom">
+        <% if policy(@booking).edit? %>
+          <%= render 'bookings/bookingform', job: @booking.job, booking: @booking  %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <div class= "backlink">
+    <%= link_to "View other job listings", jobs_path, class: "blue_font" %>
+  </div>
+</div>
