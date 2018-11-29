@@ -28,8 +28,10 @@ class BookingsController < ApplicationController
 
   def destroy
   end
+
   private
+
   def booking_params
-  params.require(:booking).permit(:job_id, :date, :message)
-end
+    params.require(:booking).permit(:job_id, :date, :message)
+  end
 end

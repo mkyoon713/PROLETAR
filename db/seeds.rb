@@ -30,15 +30,15 @@ puts "created #{User.count} users"
 puts "creating categories"
 
 educational = Category.create(
-name: 'Educational', photo: 'https://blogdotgoanimate4schoolsdotcom.files.wordpress.com/2012/09/shutterstock_81058120.jpg')
-household = Category.create(name: 'Household', photo: 'https://s3.amazonaws.com/tinycards/image/0a2f5ab2618d8c1b6fa82598109c6a30')
-animal = Category.create(name: 'Animal Care', photo: 'http://images2.fanpop.com/images/photos/4200000/Pets-domestic-animals-4217693-400-300.jpg')
-video = Category.create(name: 'Video Games', photo: 'http://q42.org.uk/wp-content/uploads/2018/07/gaming.jpg')
-landscape = Category.create(name: 'Landscaping', photo: 'https://kleinpropertymanagement.com/wp-content/uploads/landscape-1.jpg')
-food = Category.create(name: 'Food', photo: 'https://www.drdavidludwig.com/wp-content/uploads/2017/01/1-RIS_6IbCLYv1X3bzYW1lmA.jpeg')
-auto = Category.create(name: 'Automotive', photo: 'http://www.listingsauto.com/wp-content/uploads/2018/09/kombo-auto-test.jpg')
-labor = Category.create(name: 'General Labor', photo: 'https://4.imimg.com/data4/CO/FM/MY-3728901/1-250x250-250x250.png')
-personal = Category.create(name: 'Personal', photo: 'https://www.healthcareitnews.com/sites/default/files/147071720.jpg')
+name: 'Educational', photo: 'https://banner2.kisspng.com/20180421/bcq/kisspng-computer-icons-education-computer-software-pennsyl-5adbb67ad66845.1024410715243485388782.jpg')
+household = Category.create(name: 'Household', photo: 'https://png2.kisspng.com/20180413/uew/kisspng-interior-design-services-computer-icons-cabin-5ad149c3d2dbd4.5952728015236653478637.png')
+animal = Category.create(name: 'Animal Care', photo: 'https://vignette.wikia.nocookie.net/animal-jam-clans-1/images/0/0b/Medicine_catttttttttt.png/revision/latest?cb=20171010173044')
+video = Category.create(name: 'Video Games', photo: 'https://static1.squarespace.com/static/54501851e4b07d7d1dcd61e3/t/54aed438e4b0b0a87fa48c28/1420743737553/systems.jpg')
+landscape = Category.create(name: 'Landscaping', photo: 'https://cdn3.iconfinder.com/data/icons/gardening-icons/512/Wheel_Barrow-512.png')
+food = Category.create(name: 'Food', photo: 'https://image.freepik.com/vetores-gratis/conjunto-de-comida-de-mao-desenhada-e-lanche-no-fundo-do-quadro-negro_44769-123.jpg')
+auto = Category.create(name: 'Automotive', photo: 'http://www.mantelzorg-tilburg.nl/wp-content/uploads/2015/06/auto-3.jpg')
+labor = Category.create(name: 'General Labor', photo: 'http://www.votenima.com/wp-content/uploads/2018/07/noun_labor_1709573_000000-300x300.png')
+personal = Category.create(name: 'Personal', photo: 'http://www.votenima.com/wp-content/uploads/2018/07/noun_labor_1709573_000000-300x300.png')
 
 puts "created #{Category.count} categories"
 

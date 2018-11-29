@@ -1,5 +1,6 @@
 class JobsController < ApplicationController
   def index
+    @jobs = policy_scope(Job).order(created_at: :desc)
     if params[:location]
       @jobs = Job.where('location ILIKE ?', "%#{params[:location]}%")
     else
@@ -20,6 +21,7 @@ class JobsController < ApplicationController
     # @job.rating = Booking.find(params)
     @job = Job.find(params[:id])
     @booking = Booking.new
+    authorize @job
   end
 
   def new
@@ -28,21 +30,38 @@ class JobsController < ApplicationController
 
   def create
     @job = Job.new(job_params)
+    authorize @job
     @job.user = current_user
     if @job.save
       redirect_to job_path(@job)
     else
       render :new
     end
+    
+    # before you save
+
   end
 
+  # goes into controllers corresponding policy
+  # looks at the method its called in
+  # Then it checks the corresponding action name within the corresponding policy
+  # if true or false
+
   def edit
+    authorize @job
   end
 
   def update
   end
 
   def destroy
+    @job = Job.find(params[:id])
+    @job.destroy
+    authorize @job
+
+    flash.notice = "'#{@job.name}' was deleted"
+
+    redirect_to jobs_path
   end
 
   private

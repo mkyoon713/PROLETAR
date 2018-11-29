@@ -18,10 +18,24 @@
         <div>
           <%= cl_image_tag "#{@job.photo}", height: 300, crop: :fill %>
         </div>
-    </div>
-    <div class="col-xs-6 margin_bottom">
-      <%= render 'bookings/bookingform', job: @job, booking: @booking %>
+      </div>
+      <div class="col-xs-6 margin_bottom">
+        <% if policy(@job).edit? %>
+        <%= link_to "Edit", edit_job_path(@job) %>
+        <% else %>
+        <%= render 'bookings/bookingform', job: @job, booking: @booking  %>
+        <% end %>
+        <% if policy(@job).destroy? %>
+        <%= link_to "Delete", job_path(@job), method: :delete,
+                         data: { confirm: 'Are you sure?' } %>
+        <% end %>
+      </div>
     </div>
   </div>
+  <div class= "backlink">
+    <%= link_to "View other job listings", jobs_path, class: "blue_font" %>
+  </div>
 </div>
-
+<!--  if policy(Job).create?
+        link_to "New job", new_job_path
+        end -->
