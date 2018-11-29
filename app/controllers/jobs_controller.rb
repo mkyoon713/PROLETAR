@@ -1,10 +1,10 @@
 class JobsController < ApplicationController
   def index
     @jobs = policy_scope(Job).order(created_at: :desc)
-    if params[:location]
-      @jobs = Job.where('location ILIKE ?', "%#{params[:location]}%")
-    else
-      @jobs = Job.all
+    if params[:query].present? && params[:location].present?
+      location = params[:location]
+      name = params[:query]
+      @jobs = Job.where("location @@ ? and name @@ ?", location, name)
     end
   end
 

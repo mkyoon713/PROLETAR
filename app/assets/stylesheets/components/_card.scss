@@ -5,22 +5,27 @@
   margin: 20px;
   height: 220px;
   padding: 10px;
+
   .card_description {
     margin-left: 10px;
     margin-right: 10px;
     width: 400px;
   }
+
   h4 {
     font-size: 20px;
   }
+
   h5 {
     font-size: 13px;
     color: #888888;
   }
+
   p {
     margin-top: 20px;
     font-size: 14px;
   }
+
   .card_rating {
     width: 200px;
     padding: 10px;
@@ -40,4 +45,12 @@
 .category_card {
   margin: 10px;
   font-size: 14px;
+}
+
+.card-link {
+  background: black;
+}
+
+.card-link:hover {
+  opacity: 0.5;
 }

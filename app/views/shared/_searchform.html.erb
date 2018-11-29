@@ -1,11 +1,17 @@
 <div class="form">
   <div class="form_input">
-    <%= form_tag(jobs_path, method: :get) do %>
-      Location <%= text_field_tag :location, params[:location] %>
+    <%= form_tag jobs_path, method: :get do %>
+    Location
+    <%= text_field_tag :location, params[:location] %>
+  </div>
+  <div class="form_input">
+    <%= form_tag jobs_path, method: :get do %>
+    Job
+    <%= text_field_tag :query, params[:query] %>
   </div>
   <div class="form_input">
     <%= submit_tag 'Search', name: nil, class: "btn btn-primary" %>
     <% end %>
+    <% end %>
   </div>
 </div>
-
