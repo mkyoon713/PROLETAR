@@ -15,7 +15,7 @@
             <div class="col-xs-12">
               <div class="card">
                 <div class="card_image">
-                  <%= image_tag job.photo, width: 250, height: 180 %>
+                  <%= cl_image_tag job.photo, width: 250, height: 180 %>
                 </div>
                 <div class="card_description">
                   <h4><%= link_to job.name, job_path(job) %></h4>

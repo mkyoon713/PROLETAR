@@ -1,0 +1,51 @@
+.form {
+  background-color: #f5f5f5;
+  font-size: 17px;
+  .btn {
+    margin-top: 20px;
+  }
+}
+
+.overall-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  .form-control-file {
+    width: 360px;
+    margin: 0px;
+  }
+
+  .form-control {
+    width: 80%;
+    text-align: center;
+    margin-right: 0px;
+    margin-left: 35px;
+    padding-right: 0px;
+    padding-left: 0px
+  }
+
+  input {
+    width: 80%;
+    text-align: center;
+  }
+
+  abbr {
+    display: none;
+  }
+}
+
+label {
+  display: flow-root;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.job_photo input {
+  display: flex;
+  padding-left: 60px;
+  height: 34px;
+
+}
+
