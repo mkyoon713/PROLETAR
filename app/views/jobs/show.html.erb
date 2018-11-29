@@ -20,19 +20,21 @@
         </div>
       </div>
       <div class="col-xs-6 margin_bottom">
-        <% if policy(@job).edit? %>
-        <%= link_to "Edit", edit_job_path(@job) %>
-        <% else %>
-        <%= render 'bookings/bookingform', job: @job, booking: @booking  %>
-        <% end %>
-        <% if policy(@job).destroy? %>
-        <%= link_to "Delete", job_path(@job), method: :delete,
+        <div>
+          <% if policy(@job).edit? %>
+          <%= link_to "Edit", edit_job_path(@job), class: "btn btn-primary" %>
+          <% else %>
+          <%= render 'bookings/bookingform', job: @job, booking: @booking  %>
+          <% end %>
+          <% if policy(@job).destroy? %>
+          <%= link_to "Delete", job_path(@job), class: "btn btn-primary", method: :delete,
                          data: { confirm: 'Are you sure?' } %>
-        <% end %>
+          <% end %>
+        </div>
       </div>
     </div>
   </div>
-  <div class= "backlink">
+  <div class="backlink">
     <%= link_to "View other job listings", jobs_path, class: "blue_font" %>
   </div>
 </div>
