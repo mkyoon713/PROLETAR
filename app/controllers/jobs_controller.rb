@@ -26,6 +26,7 @@ class JobsController < ApplicationController
 
   def new
     @job = Job.new
+    authorize @job
   end
 
   def create
@@ -37,7 +38,7 @@ class JobsController < ApplicationController
     else
       render :new
     end
-    
+
     # before you save
 
   end
