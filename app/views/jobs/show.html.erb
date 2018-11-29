@@ -16,7 +16,7 @@
       </div>
       <div class="col-xs-6">
         <div>
-          <%= image_tag "#{@job.photo}", height: 300, crop: :fill %>
+          <%= cl_image_tag "#{@job.photo}", height: 300, crop: :fill %>
         </div>
     </div>
     <div class="col-xs-6 margin_bottom">
