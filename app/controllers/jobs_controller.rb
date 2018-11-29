@@ -49,10 +49,18 @@ class JobsController < ApplicationController
   # if true or false
 
   def edit
+    @job = Job.find(params[:id])
     authorize @job
   end
 
   def update
+    @job = Job.find(params[:id])
+    @job.update(job_params)
+    authorize @job
+
+    flash.notice = "'#{@job.name}' was updated"
+
+    redirect_to jobs_path
   end
 
   def destroy
