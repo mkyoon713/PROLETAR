@@ -16,7 +16,10 @@
           <p>
             <%= category.name %>
           </p>
-          <%=link_to image_tag category.photo, class: "card-link", width: 300, height: 150 %>
+          <% id = category.id %>
+          <%= link_to jobs_path(category_id: id) do %>
+          <%= image_tag category.photo, class: "card-link", width: 300, height: 150 %>
+          <% end %>
         </div>
       </div>
       <% end %>
