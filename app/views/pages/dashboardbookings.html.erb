@@ -26,6 +26,9 @@
         <div class="message-body">
           <p><strong><%= booking.job.name %></strong></p>
           <p>With <%= booking.job.user.email %></p>
+          <button class="small_button">
+            <%= link_to "Submit Review", new_booking_review_path(booking) %>
+          </button>
         </div>
         <div class="message-status">
           <p class="status pending"><%= booking.status %></p>

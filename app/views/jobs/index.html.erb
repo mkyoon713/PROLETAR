@@ -9,7 +9,7 @@
         <%= render 'shared/searchform' %>
       </div>
       <div class="cards_container background_grey">
-        <h5 class="remove_topmargin"><strong><%= @jobs.count %> job listing</strong></h5>
+        <h5 class="remove_topmargin"><strong><%= pluralize @jobs.count, "job listing" %> </strong></h5>
         <% @jobs.each do |job| %>
           <div class="row">
             <div class="col-xs-12">

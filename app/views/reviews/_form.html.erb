@@ -1,0 +1,27 @@
+<div class="overall_container">
+  <div class="form">
+
+      <%= simple_form_for([ booking, review ]) do |form| %>
+      <% if @review.errors.any? %>
+      <div class="errors-container">
+        <ul>
+          <% @review.errors.full_messages.each do |message| %>
+          <li>
+            <%= message %>
+          </li>
+          <% end %>
+        </ul>
+      </div>
+      <% end %>
+      <div class="job_group">
+        <%= form.input :rating, collection: [1, 2, 3, 4, 5] %>
+      </div>
+      <div class="job_group" style="width: 130%;">
+        <%= form.input :content, as: :text %>
+      </div>
+      <%= form.button :submit, class: "btn btn-primary job_button" %>
+      <% end %>
+
+  </div>
+</div>
+

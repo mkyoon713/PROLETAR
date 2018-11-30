@@ -30,14 +30,21 @@
           </div>
           <% end %>
           <% if policy(@job).destroy? %>
-          <%= link_to "Delete", job_path(@job), class: "btn btn-primary", method: :delete,
-                         data: { confirm: 'Are you sure?' } %>
+          <%= link_to "Delete", job_path(@job), class: "btn btn-primary", method: :delete, data: { confirm: 'Are you sure?' } %>
           <% end %>
         </div>
         <br>
         <div class="backlink">
           <%= link_to "View other job listings", jobs_path, class: "blue_font" %>
         </div>
+      </div>
+      <div class="col-xs-6 margin_bottom review_box">
+        <% @job.bookings.each do |booking| %>
+          <h5><strong><%= pluralize booking.reviews.count, "review" %></strong></h5>
+          <% booking.reviews.each do |review| %>
+            <p>"<%= review.content %>" (<%= review.rating %> out of 5)</p>
+          <% end %>
+        <% end %>
       </div>
     </div>
   </div>
