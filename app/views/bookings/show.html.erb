@@ -1,20 +1,22 @@
-<div class="overall_container">
-  <div class="large_topmargin">
-    <h1><strong>Thank you, that's all!</strong></h1>
+<div class="message-container">
+<div class="message">
+  <div class="message-name">
+    <% @bookings.each do |booking| %>
+     <h5>
+    <%= booking.user.email %>
+    </h5>
+    <p><%= booking.date %></p>
   </div>
-  <div class="large_topmargin">
-    <p>You have successfully confirmed getting help with</p>
-  <div class="blue_font">
+  <div class="message-body">
+
     <p>
-      <%= @booking.job.user.email %>
+     <%= booking.job.description %>
     </p>
   </div>
-    <p>
-      on
-      <%= @booking.date %>
-    </p>
+  <div class="message-status">
+    <%= booking.status %>
   </div>
-    <div class="blue_font">
-    <%= link_to "View other job listings", jobs_path %>
-  </div>
+
+  <% end %>
+</div>
 </div>

@@ -12,15 +12,16 @@ class BookingsController < ApplicationController
     @booking.job = @job
     @booking.user = current_user
     if @booking.save
-      redirect_to job_booking_path(@job, @booking)
+      redirect_to confirm_path(@job, @booking)
     else
       render :new
     end
   end
 
   def show
-    @booking = Booking.find(params[:id])
-    authorize @booking
+    job = Job.find(params[:job_id])
+    @bookings = job.bookings
+    authorize @bookings
   end
 
   def edit
@@ -40,6 +41,11 @@ class BookingsController < ApplicationController
     @booking.destroy
     authorize @booking
     redirect_to dashboard_bookings_path
+  end
+
+  def confirm
+    @booking = Booking.find(params[:id])
+    authorize @booking
   end
 
   private

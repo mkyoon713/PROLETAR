@@ -1,0 +1,20 @@
+<div class="overall_container">
+  <div class="large_topmargin">
+    <h1><strong>Thank you, that's all!</strong></h1>
+  </div>
+  <div class="large_topmargin">
+    <p>You have successfully confirmed getting help with</p>
+  <div class="blue_font">
+    <p>
+      <%= @booking.job.user.email %>
+    </p>
+  </div>
+    <p>
+      on
+      <%= @booking.date %>
+    </p>
+  </div>
+    <div class="blue_font">
+    <%= link_to "View other job listings", jobs_path %>
+  </div>
+</div>

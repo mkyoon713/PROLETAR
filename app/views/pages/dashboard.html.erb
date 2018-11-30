@@ -5,13 +5,15 @@
       <div class="message">
         <%= cl_image_tag job.photo, width: 150, height: 100 %>
         <div class="message-body">
-          <p><strong><%= job.name %></strong></p>
+          <p><strong><%= link_to job.name, all_bookings_path(job) %></strong></p>
           <p>Number of bookings: <%= job.bookings.count %></p>
         </div>
         <div class="message-status">
           <p class="price">$<%= job.price %> /hr</p>
         </div>
       </div>
+      <%= link_to "Confirm", confirm_path %>
     <% end %>
+
   </div>
 </div>
