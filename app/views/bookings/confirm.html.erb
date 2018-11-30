@@ -3,7 +3,11 @@
     <h1><strong>Thank you, that's all!</strong></h1>
   </div>
   <div class="large_topmargin">
-    <p>You have successfully confirmed getting help with</p>
+     <% if policy(@booking).edit? %>
+        <p>You have successfully confirmed getting help with</p>
+          <% else %>
+        <p>You have sucessfully confirmed lending your help to</p>
+        <% end %>
   <div class="blue_font">
     <p>
       <%= @booking.job.user.email %>
