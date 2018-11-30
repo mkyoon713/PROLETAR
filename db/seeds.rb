@@ -30,14 +30,14 @@ puts "created #{User.count} users"
 puts "creating categories"
 
 educational = Category.create(
-name: 'Educational', photo: 'https://blogdotgoanimate4schoolsdotcom.files.wordpress.com/2012/09/shutterstock_81058120.jpg')
-household = Category.create(name: 'Household', photo: 'https://s3.amazonaws.com/tinycards/image/0a2f5ab2618d8c1b6fa82598109c6a30')
-animal = Category.create(name: 'Animal Care', photo: 'http://images2.fanpop.com/images/photos/4200000/Pets-domestic-animals-4217693-400-300.jpg')
-video = Category.create(name: 'Video Games', photo: 'http://q42.org.uk/wp-content/uploads/2018/07/gaming.jpg')
+name: 'Educational', photo: 'https://images.unsplash.com/photo-1521587760476-6c12a4b040da?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=1fd72b80aa0b43f74015163c2ad6fcc5&auto=format&fit=crop&w=2700&q=80')
+household = Category.create(name: 'Household', photo: 'https://images.unsplash.com/photo-1534152519866-4d57e8fc9bf5?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=91360e173ea76a5d3228e58a9142a294&auto=format&fit=crop&w=2740&q=80')
+animal = Category.create(name: 'Animal Care', photo: 'https://images.unsplash.com/photo-1522276498395-f4f68f7f8454?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=61a38f22baeb6a00be6663ab28dc5274&auto=format&fit=crop&w=2698&q=80')
+video = Category.create(name: 'Video Games', photo: 'https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=f2e8843e67935b873f32154438cf9664&auto=format&fit=crop&w=1500&q=80')
 landscape = Category.create(name: 'Landscaping', photo: 'https://kleinpropertymanagement.com/wp-content/uploads/landscape-1.jpg')
-food = Category.create(name: 'Food', photo: 'https://www.drdavidludwig.com/wp-content/uploads/2017/01/1-RIS_6IbCLYv1X3bzYW1lmA.jpeg')
-auto = Category.create(name: 'Automotive', photo: 'http://www.listingsauto.com/wp-content/uploads/2018/09/kombo-auto-test.jpg')
-labor = Category.create(name: 'General Labor', photo: 'https://4.imimg.com/data4/CO/FM/MY-3728901/1-250x250-250x250.png')
+food = Category.create(name: 'Food', photo: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=67fb2e7b1fbe39b18b51146234ef38aa&auto=format&fit=crop&w=1500&q=80')
+auto = Category.create(name: 'Automotive', photo: 'https://images.unsplash.com/photo-1526726538690-5cbf956ae2fd?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=16098a7b1f7ab00d860111bd413145c3&auto=format&fit=crop&w=1500&q=80')
+labor = Category.create(name: 'General Labor', photo: 'https://images.unsplash.com/photo-1473090928358-00fcead4f08c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=f041998fd8a0cb09c1da409903822780&auto=format&fit=crop&w=1284&q=80')
 personal = Category.create(name: 'Personal', photo: 'https://www.healthcareitnews.com/sites/default/files/147071720.jpg')
 
 puts "created #{Category.count} categories"
