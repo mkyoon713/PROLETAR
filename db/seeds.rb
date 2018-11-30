@@ -6,6 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+Review.destroy_all
 Booking.destroy_all
 Job.destroy_all
 Category.destroy_all
@@ -142,7 +143,44 @@ user: josh)
 puts "created #{Booking.count} bookings"
 
 
+puts "creating reviews"
+review1 = Review.create(
+  content: "it was alright",
+  rating: 3,
+  booking: booking1)
 
+review2 = Review.create(
+  content: "THE BEST EVER",
+  rating: 5,
+  booking: booking2)
+
+review3 = Review.create(
+  content: "very disappointing",
+  rating: 1,
+  booking: booking3)
+
+review4 = Review.create(
+  content: "highly recommended!!",
+  rating: 5,
+  booking: booking4)
+
+review5 = Review.create(
+  content: "NEVER AGAIN :(",
+  rating: 1,
+  booking: booking4)
+
+review6 = Review.create(
+  content: "He was an awesome dancer",
+  rating: 5,
+  booking: booking1)
+
+review7 = Review.create(
+  content: "He was too old for me",
+  rating: 2,
+  booking: booking1)
+
+
+puts "created #{Review.count} reviews"
 
 
 
