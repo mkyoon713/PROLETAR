@@ -116,28 +116,32 @@ date: Date.today,
 status: 'pending',
 rating: 4,
 job: job1,
-user: josh)
+user: josh,
+message: 'Please help me! I am moving to Japan in a month and I know nothing.')
 
 booking2 = Booking.create(
 date: Date.today,
 status: 'pending',
 rating: 4,
 job: job2,
-user: max)
+user: max,
+message: 'I have a bad ant infestation and I need help immediately!!!')
 
 booking3 = Booking.create(
 date: Date.today,
 status: 'pending',
 rating: 4,
 job: job3,
-user: karen)
+user: karen,
+message: 'My fence is starting to become dull and needs a fresh coat')
 
 booking4 = Booking.create(
 date: Date.today,
 status: 'pending',
 rating: 4,
 job: job4,
-user: josh)
+user: josh,
+message: 'Please respond as soon as possible! I am proposing to my wife tomorrow but I have lost the ring!')
 
 
 puts "created #{Booking.count} bookings"
