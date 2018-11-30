@@ -5,11 +5,10 @@ class JobsController < ApplicationController
       location = params[:location]
       name = params[:query]
       @jobs = Job.where("location @@ ? and name @@ ?", location, name)
-    else
-      params[:category_id].present?
+    elsif params[:category_id].present?
       @jobs = Job.where(category_id: params[:category_id])
-    # else
-    #   @jobs = Job.all
+    else
+      @jobs = Job.all
     end
   end
 
