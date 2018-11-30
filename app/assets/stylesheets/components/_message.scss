@@ -46,10 +46,12 @@
 .message-body p {
   margin: 6px 0;
 }
-.message-status {
+.move-left p {
   font-size: 14px;
   font-weight: bold;
+  padding-left: 1200px;
 }
+
 .status.accepted {
   color: #04A366;
 }

@@ -1,22 +1,20 @@
-<div class="message-container">
+
+
+
+  <% @bookings.each do |booking| %>
 <div class="message">
   <div class="message-name">
-    <% @bookings.each do |booking| %>
-     <h5>
-    <%= booking.user.email %>
-    </h5>
+    <h3><%= booking.user.email %></h3>
     <p><%= booking.date %></p>
   </div>
   <div class="message-body">
-
-    <p>
-     <%= booking.job.description %>
-    </p>
+    <p><%= booking.message %></p>
   </div>
   <div class="message-status">
-    <%= booking.status %>
-  </div>
-
+    <p class="status pending">Pending</p>
+    <%= link_to confirm_path(booking.job, booking) do %>
+  <%= button_tag "confirm", class: 'btn-primary price' %>
   <% end %>
+  </div>
 </div>
-</div>
+  <% end %>

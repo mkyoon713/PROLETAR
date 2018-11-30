@@ -19,8 +19,8 @@ class BookingsController < ApplicationController
   end
 
   def show
-    job = Job.find(params[:job_id])
-    @bookings = job.bookings
+    @job = Job.find(params[:job_id])
+    @bookings = @job.bookings
     authorize @bookings
   end
 
